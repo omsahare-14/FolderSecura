@@ -26,8 +26,12 @@ Now you have a local copy of the project to work with.
 ## Usage
 
 To run this tool, open 'run.py' file in CMD. If you're opening it for the first time, it'll ask you to set a Password and Recovery Question/Answer.
-![Home Screen](https://example.com/images/myimage.jpg)
 
+![Home Screen](Screenshots/1.png)
+
+Run the 'help' command to view all the available commands. Type any one of the commands and follow the on-screen instructions to use that command
+
+![Help Screen]()
 
 ## Features
 
