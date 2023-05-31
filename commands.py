@@ -1,23 +1,24 @@
 import DatabaseOperations as dbops
 import FolderOperations as folops
+import warnings
 
-# TODO Add the list of dirs in lock dirs database
+warnings.filterwarnings("ignore")
 
 def executeCommand(com):
-    if com == "help": # DONE
+    if com == "help":
         dbops.showHelp()
     
-    elif com == "lock": # DONE
+    elif com == "lock":
         folops.hideFolder()
     
-    elif com == "unlock": # DONE
+    elif com == "unlock":
         folops.unhideFolder()
     
-    elif com == "show": # DONE
+    elif com == "show":
         dbops.showLockedDirs()
     
-    elif com == "change passwd": # DONE
+    elif com == "change passwd":
         dbops.forgotPasswd()
     
     else:
-        print("Invalid Command")
+        print("\033[91mInvalid Command\033[0m")

@@ -2,6 +2,9 @@ import win32api
 import win32con
 import DatabaseOperations as dbops
 import sqlite3
+import warnings
+
+warnings.filterwarnings("ignore")
 
 def hideFolder():
     folder_path = str(input("Enter the Directory to Lock: "))
@@ -20,9 +23,9 @@ def hideFolder():
         conn.close()
 
 
-        print(f"Folder hidden: {new_path}\n")
+        print(f"\033[32mFolder hidden: {new_path}\033[0m\n")
     except Exception as e:
-        print(f"Error hiding folder: {e}")
+        print(f"\033[31mError hiding folder: {e}\033[0m")
 
 
 def unhideFolder():
@@ -46,7 +49,7 @@ def unhideFolder():
         cursor.close()
         conn.close()
 
-        print(f"Folder unhidden: {new_path}\n")
+        print(f"\033[32mFolder unhidden: {new_path}\033[0m\n")
 
     except Exception as e:
-        print(f"Error unhide folder: {e}")
+        print(f"\033[31mError unhide folder: {e}\033[0m")

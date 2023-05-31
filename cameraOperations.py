@@ -1,5 +1,8 @@
 import cv2
 import os
+import warnings
+
+warnings.filterwarnings("ignore")
 
 def create_folder(folder_path):
     if not os.path.exists(folder_path):
