@@ -19,6 +19,7 @@ To get a local copy of this project, you can clone it using Git. Follow the step
 
    ```shell
    git clone https://github.com/omsahare-14/FolderSecura/
+   ```
 4. After executing the command, the repository will be cloned to your local machine.
 
 Now you have a local copy of the project to work with.
@@ -26,7 +27,10 @@ Now you have a local copy of the project to work with.
 ## Usage
 
 To run this tool, open 'run.py' file in CMD. If you're opening it for the first time, it'll ask you to set a Password and Recovery Question/Answer.
-
+   
+   ```shell
+   python run.py
+   ```
 ![Home Screen](Screenshots/1.png)
 
 Run the 'help' command to view all the available commands. Type any one of the commands and follow the on-screen instructions to use that command
@@ -35,11 +39,9 @@ Run the 'help' command to view all the available commands. Type any one of the c
 
 ## Features
 
-- Feature 1: Description of feature 1.
-- Feature 2: Description of feature 2.
-- Feature 3: Description of feature 3.
-
-Highlight the key features of your project. List and describe the functionalities that make your project unique or valuable.
+- Password Protection: All your folders/files are password protected. The password are stored in secure manner to prevent password theft in any manner.
+- Webcam Security: If someone enters incorrect password for 3 times, their snapshot is captured by the webcam to later identify the perpetrator.
+- Hide Folder: All your sensitive and secret data stored inside the folder is hidden in a secure manner to prevent data theft.
 
 ## Contact Me
 
