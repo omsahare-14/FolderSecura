@@ -1,6 +1,9 @@
 import sqlite3
 from tabulate import tabulate
 import hashlib
+import warnings
+
+warnings.filterwarnings("ignore")
 
 class CustomException (Exception):
     pass
@@ -55,10 +58,10 @@ def setRecovery():
             insert_query = "INSERT INTO recovery_table (Recovery_Question, Recovery_Answer_Hash) VALUES (?, ?)"
             cursor.execute(insert_query, (newRecoveryQuestion, recovery_answer_hash))
             conn.commit()
-            print("\nRecovery Question/Answer Set Successfully\n")
+            print("\n\033[32mRecovery Question/Answer Set Successfully\033[0m\n")
 
     except CustomException as e:
-        print("Error Occured: ", str(e))
+        print("\033[31mError Occured: \033[0m", str(e))
     
     cursor.close()
     conn.close()
@@ -91,10 +94,10 @@ def setPasswd():
             insert_passwd_query = "INSERT INTO passwd_table (Passwd_Hash) VALUES (?)"
             cursor.execute(insert_passwd_query, (passwd_hash,))
             conn.commit()
-            print("\nPassword Changed Successfully\n")
+            print("\n\033[32mPassword Changed Successfully\033[0m\n")
 
     except CustomException as e:
-        print("Error Occured: ", str(e))
+        print("\033[31mError Occured: \033[0m", str(e))
 
     cursor.close()
     conn.close()
@@ -119,14 +122,13 @@ def forgotPasswd():
             if answer_hash == getRecoveryAnswer():
                 setPasswd()
             else:
-                print("\nAuthentication Failed! Try again\n")
+                print("\n\033[31mAuthentication Failed! Try again\033[0m\n")
 
     except CustomException as e:
-        print("Error Occured: ", str(e))
+        print("\033[31mError Occured: \033[0m", str(e))
  
     cursor.close()
     conn.close()
-
 
 def authenticate():
     conn = sqlite3.connect('dirs.db')
@@ -150,7 +152,7 @@ def authenticate():
                 return False
 
     except CustomException as e:
-        print("Error Occured: ", str(e))
+        print("\033[31mError Occured: \033[0m", str(e))
 
     cursor.close()
     conn.close()
@@ -223,7 +225,7 @@ def startDB():
         cursor.execute(create_passwdTable_query)
         conn.commit()
 
-        print("Set Password to Lock/Unlock Folders\n")
+        print("\033[34mSet Password to Lock/Unlock Folders\033[0m\n")
         setPasswd()
     
     check_recoverytable_query = "SELECT name FROM sqlite_master WHERE type='table' AND name='recovery_table'"
