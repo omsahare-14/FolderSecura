@@ -31,7 +31,7 @@ To run this tool, open 'run.py' file in CMD. If you're opening it for the first 
 
 Run the 'help' command to view all the available commands. Type any one of the commands and follow the on-screen instructions to use that command
 
-![Help Screen]()
+![Help Screen](Screenshots/2.png)
 
 ## Features
 
