@@ -47,6 +47,6 @@ Run the 'help' command to view all the available commands. Type any one of the c
 
 If you have any questions, feedback, or suggestions, feel free to reach out to me.
 
-- Email: [omsahareofficial@gmail.com](mailto:omsahareofficial@gmail.com)
-- LinkedIn: [om-sahare-253b30207/](https://www.linkedin.com/in/om-sahare-253b30207/)
+- Email: [omsahare002@gmail.com](mailto:omsahare002@gmail.com)
+- LinkedIn: [@omsahare14](https://www.linkedin.com/in/omsahare14/)
 - Twitter: [@omsahare14](https://twitter.com/omsahare14)
